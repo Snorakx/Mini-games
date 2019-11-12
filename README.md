@@ -48,7 +48,7 @@ Project is: _in progress_
 
 ## Contact
 Created by:
-@Snorakx [https://github.com/Snorakx] 
-@FiPiL99 [https://github.com/FiPiL99] 
-@liwiakawa [https://github.com/liwiakawa] 
+[@Snorakx](https://github.com/Snorakx) 
+[@FiPiL99](https://github.com/FiPiL99) 
+[@liwiakawa](https://github.com/liwiakawa) 
 Feel free to contact us!
