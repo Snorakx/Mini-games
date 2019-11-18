@@ -1,0 +1,17 @@
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.csprojAssemblyReference.cache
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\MainWindow.g.cs
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\App.g.cs
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman_MarkupCompile.cache
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman_MarkupCompile.lref
+C:\Users\fipis\source\repos\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\fipis\source\repos\Hangman\Hangman\bin\Debug\Hangman.exe
+C:\Users\fipis\source\repos\Hangman\Hangman\bin\Debug\Hangman.pdb
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\MainWindow.baml
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.g.resources
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.cache
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.csproj.CoreCompileInputs.cache
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\Hangman.pdb
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\HangmanWindow.g.cs
+C:\Users\fipis\source\repos\Hangman\Hangman\obj\Debug\HangmanWindow.baml
