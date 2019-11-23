@@ -8,7 +8,7 @@
         Title="HangmanWindow" Height="450" Width="800">
 
     <Grid>
-        <Button Content="Check" HorizontalAlignment="Left" Margin="127,331,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
+        <Button Content="Check" HorizontalAlignment="Left" Margin="127,331,0,0" VerticalAlignment="Top" Width="37" Height="23" Click="Button_Click"/>
         <Button Content="Check" HorizontalAlignment="Left" Margin="424,331,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
         <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" HorizontalAlignment="Left" Height="23" Margin="309,331,0,0" TextWrapping="Wrap" Text="Guess the word" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" TextChanged="GuessWord_TextChanged" LostFocus="resetPlaceholder"  >
             <TextBox.Foreground>

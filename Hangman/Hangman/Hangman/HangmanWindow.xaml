@@ -1,0 +1,32 @@
+﻿<Window x:Class="Hangman.HangmanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hangman"
+        mc:Ignorable="d"
+        Title="HangmanWindow" Height="450" Width="800">
+
+    <Grid>
+        <Button Content="Check" HorizontalAlignment="Left" Margin="127,331,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
+        <Button Content="Check" HorizontalAlignment="Left" Margin="424,331,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
+        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" HorizontalAlignment="Left" Height="23" Margin="309,331,0,0" TextWrapping="Wrap" Text="Guess the word" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" TextChanged="GuessWord_TextChanged" LostFocus="resetPlaceholder"  >
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBox x:Name="Letter" HorizontalAlignment="Left" Height="23" Margin="77,331,0,0" TextWrapping="Wrap" Text="Letter" VerticalAlignment="Top" Width="45" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+            </TextBox.Foreground>
+        </TextBox>
+        <Image Margin="506,49,10,65" Source="8SRM8xDgq8duQSfM.jpg" Stretch="Fill"/>
+        <Label Content="Guess the word" HorizontalAlignment="Left" Margin="127,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25"/>
+        <Grid x:Name="LabelWord" Background="Azure" Margin="10,70,302,266"/>
+    </Grid>
+
+
+
+
+</Window>
+

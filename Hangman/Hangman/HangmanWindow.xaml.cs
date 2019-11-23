@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HangmanLib;
 
 namespace Hangman
 {
@@ -22,12 +24,20 @@ namespace Hangman
         private List<Label> Labels { get; set; }
         private string placeholderGuess = "Guess the word";
         private string placeholderLetter = "Letter";
+        protected string goodwords;
+        string oneLetter;
+        Game newGame = new Game();
 
         public HangmanWindow()
         {
             InitializeComponent();
+           
             Labels = new List<Label>();
-            CreateLabel(6);
+            var wordsFile = File.ReadAllText("words.txt").Split(',');
+            var randomWordIndex = new Random().Next(0, wordsFile.Length - 1);
+            newGame.Word = wordsFile[randomWordIndex];
+
+            CreateLabel(newGame.Length);
         }
         private void CreateLabel(int lenght)
         {
@@ -100,8 +110,26 @@ namespace Hangman
             }
 
         }
+
         /***********************/
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            oneLetter = Letter.Text.ToUpper();
+
+            int[] temp = newGame.CheckLetter(oneLetter[0]);
+
+            for(int i = 0; i<temp.Length; i++)
+            {
+                if( temp[i] == 1)
+                {
+                    Labels[i].Content = newGame.Word[i];
+                }
+            }
+        }
+
+      
 
     }
-    }
+}
 
