@@ -8,21 +8,23 @@
         Title="HangmanWindow" Height="450" Width="800">
 
     <Grid>
-        <Button Content="Check" HorizontalAlignment="Left" Margin="127,331,0,0" VerticalAlignment="Top" Width="37" Height="23" Click="Button_Click"/>
-        <Button Content="Check" HorizontalAlignment="Left" Margin="424,331,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
-        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" HorizontalAlignment="Left" Height="23" Margin="309,331,0,0" TextWrapping="Wrap" Text="Guess the word" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" TextChanged="GuessWord_TextChanged" LostFocus="resetPlaceholder"  >
+        <Button Content="Check" Margin="127,331,0,0" Click="Button_Click" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="37"/>
+        <Button Content="Check" Margin="424,331,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="37"/>
+        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="309,331,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" TextChanged="GuessWord_TextChanged" LostFocus="resetPlaceholder" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"  >
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <TextBox x:Name="Letter" HorizontalAlignment="Left" Height="23" Margin="77,331,0,0" TextWrapping="Wrap" Text="Letter" VerticalAlignment="Top" Width="45" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter">
+        <TextBox x:Name="Letter" Margin="77,331,0,0" TextWrapping="Wrap" Text="Letter" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="45">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <Image Margin="506,49,10,65" Source="8SRM8xDgq8duQSfM.jpg" Stretch="Fill"/>
+        <Image Margin="516,27,-0.4,0" Source="8SRM8xDgq8duQSfM.jpg" Stretch="Fill" Height="306" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="127,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25"/>
-        <Grid x:Name="LabelWord" Background="Azure" Margin="10,70,302,266"/>
+        <Grid x:Name="LabelWord" Background="Azure" Margin="10,70,0,0" HorizontalAlignment="Left" Width="482" Height="84" VerticalAlignment="Top"/>
+        <Grid x:Name="Literki" Background="Azure" Margin="0,359,-0.4,0" RenderTransformOrigin="0.503,1.151" Height="38" VerticalAlignment="Top"/>
+
     </Grid>
 
 

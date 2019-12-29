@@ -24,8 +24,11 @@ namespace Hangman
         private List<Label> Labels { get; set; }
         private string placeholderGuess = "Guess the word";
         private string placeholderLetter = "Letter";
-        protected string goodwords;
-        string oneLetter;
+        char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
+            'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
+            'O','Ó', 'P', 'Q', 'R', 'S','Ś', 'T', 'U', 'V', 'W',
+            'X', 'Y', 'Z','Ź'};
+    string oneLetter;
         Game newGame = new Game();
 
         public HangmanWindow()
@@ -33,13 +36,16 @@ namespace Hangman
             InitializeComponent();
            
             Labels = new List<Label>();
+
             var wordsFile = File.ReadAllText("words.txt").Split(',');
             var randomWordIndex = new Random().Next(0, wordsFile.Length - 1);
             newGame.Word = wordsFile[randomWordIndex];
+            
 
-            CreateLabel(newGame.Length);
+            CreateLabel(newGame.Length, LabelWord);
+            CreateLabelForAlph(Alphabet.Length,Literki);
         }
-        private void CreateLabel(int lenght)
+        private void CreateLabel(int lenght, Grid grid)
         {
             for (int i = 0; i < lenght; i++)
             {
@@ -57,12 +63,42 @@ namespace Hangman
                 label.Name = "Character" + i.ToString();
 
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
+                Labels.Add(label);
+
+                grid.Children.Add(label);
+            }
+        }
+
+        private void CreateLabelForAlph(int lenght, Grid grid)
+        {
+            for (int i = 0; i < lenght; i++)
+            {
+                Label label = new Label();
+                label.FontSize = 10;
+                label.FontWeight = FontWeight;
+                label.HorizontalContentAlignment = HorizontalAlignment.Center;
+                label.VerticalContentAlignment = VerticalAlignment.Center;
+                label.BorderThickness = new Thickness(1, 1, 1, 1);
+                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0x2D, 0x2D, 0x30));
+                label.Height = label.Width = 23;
+                label.HorizontalAlignment = HorizontalAlignment.Left;
+                label.VerticalAlignment = VerticalAlignment.Top;
+
+                label.Name = "Character" + i.ToString();
+
+                label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
+                label.Content = Alphabet[i];
+                
 
                 Labels.Add(label);
 
-                LabelWord.Children.Add(label);
+                grid.Children.Add(label);
             }
         }
+
+
+
+
 
         private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -116,6 +152,8 @@ namespace Hangman
         {
 
             oneLetter = Letter.Text.ToUpper();
+
+
 
             int[] temp = newGame.CheckLetter(oneLetter[0]);
 
