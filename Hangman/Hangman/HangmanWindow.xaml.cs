@@ -21,21 +21,19 @@ namespace Hangman
     /// </summary>
     public partial class HangmanWindow : Window
     {
-        private List<Label> Labels { get; set; }
+        private List<Label> LabelsForWord { get; set; }
+        private List<Label> LabelsForAlpha { get; set; }
+
         private string placeholderGuess = "Guess the word";
         private string placeholderLetter = "Letter";
-        char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
-            'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
-            'O','Ó', 'P', 'Q', 'R', 'S','Ś', 'T', 'U', 'V', 'W',
-            'X', 'Y', 'Z','Ź'};
-    string oneLetter;
+        string oneLetter;
         Game newGame = new Game();
 
         public HangmanWindow()
         {
             InitializeComponent();
-           
-            Labels = new List<Label>();
+            LabelsForWord = new List<Label>();
+            LabelsForAlpha = new List<Label>();
 
             var wordsFile = File.ReadAllText("words.txt").Split(',');
             var randomWordIndex = new Random().Next(0, wordsFile.Length - 1);
@@ -43,7 +41,8 @@ namespace Hangman
             
 
             CreateLabel(newGame.Length, LabelWord);
-            CreateLabelForAlph(Alphabet.Length,Literki);
+            CreateLabelForAlph(newGame.Alphabet.Length, Literki);
+           
         }
         private void CreateLabel(int lenght, Grid grid)
         {
@@ -63,7 +62,7 @@ namespace Hangman
                 label.Name = "Character" + i.ToString();
 
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
-                Labels.Add(label);
+                LabelsForWord.Add(label);
 
                 grid.Children.Add(label);
             }
@@ -87,18 +86,12 @@ namespace Hangman
                 label.Name = "Character" + i.ToString();
 
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
-                label.Content = Alphabet[i];
-                
+                label.Content = newGame.Alphabet[i];
 
-                Labels.Add(label);
-
+                LabelsForAlpha.Add(label);
                 grid.Children.Add(label);
             }
         }
-
-
-
-
 
         private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -154,20 +147,34 @@ namespace Hangman
             oneLetter = Letter.Text.ToUpper();
 
 
-
+           // arr[Array.IndexOf(arr, "paris")] = "new york"
             int[] temp = newGame.CheckLetter(oneLetter[0]);
-
-            for(int i = 0; i<temp.Length; i++)
+            if (temp.Contains(1))
             {
-                if( temp[i] == 1)
+
+                for (int i = 0; i < temp.Length; i++)
                 {
-                    Labels[i].Content = newGame.Word[i];
+                    if (temp[i] == 1)
+                    {
+                        LabelsForWord[i].Content = newGame.Word[i];
+                    }
                 }
             }
+            else
+            {
+              
+                    for(int i = 0; i < LabelsForAlpha.Count; i++)
+                {
+                    if (LabelsForAlpha[i].Content.ToString() == oneLetter)
+                        ChangeColorOfLetter(LabelsForAlpha[i]);
+                }
+               
+            }
         }
-
-      
-
+        private void ChangeColorOfLetter(Label label)
+        {
+            label.Background = Brushes.Gray;
+        }
     }
 }
 

@@ -16,7 +16,12 @@ namespace HangmanLib
         
         public string Word { get; set; }
         public int Length => Word.Length;
-        
+
+        public char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
+            'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
+            'O','Ó', 'P', 'Q', 'R', 'S','Ś', 'T', 'U', 'V', 'W',
+            'X', 'Y', 'Z','Ź'};
+
         public int[] CheckLetter(char letter)
         {
             int[] temp = new int[Length];
@@ -35,8 +40,5 @@ namespace HangmanLib
 
             return temp;
         }
-        
-       
-
     }
 }
