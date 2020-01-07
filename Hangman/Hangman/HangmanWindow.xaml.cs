@@ -147,7 +147,7 @@ namespace Hangman
             oneLetter = Letter.Text.ToUpper();
 
 
-           // arr[Array.IndexOf(arr, "paris")] = "new york"
+          
             int[] temp = newGame.CheckLetter(oneLetter[0]);
             if (temp.Contains(1))
             {
@@ -157,7 +157,13 @@ namespace Hangman
                     if (temp[i] == 1)
                     {
                         LabelsForWord[i].Content = newGame.Word[i];
+                        for (int j = 0; j < LabelsForAlpha.Count; j++)
+                        {
+                            if (LabelsForAlpha[j].Content.ToString() == oneLetter)
+                                ChangeColorOfLetter(LabelsForAlpha[j], Brushes.Green);
+                        }
                     }
+
                 }
             }
             else
@@ -166,15 +172,19 @@ namespace Hangman
                     for(int i = 0; i < LabelsForAlpha.Count; i++)
                 {
                     if (LabelsForAlpha[i].Content.ToString() == oneLetter)
-                        ChangeColorOfLetter(LabelsForAlpha[i]);
+                        ChangeColorOfLetter(LabelsForAlpha[i], Brushes.Red);
                 }
                
             }
         }
-        private void ChangeColorOfLetter(Label label)
+
+
+        private void ChangeColorOfLetter(Label label, SolidColorBrush color)
         {
-            label.Background = Brushes.Gray;
+            label.Background = color;
         }
+
+        
     }
 }
 
