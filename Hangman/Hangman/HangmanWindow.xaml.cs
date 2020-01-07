@@ -39,7 +39,6 @@ namespace Hangman
             var randomWordIndex = new Random().Next(0, wordsFile.Length - 1);
             newGame.Word = wordsFile[randomWordIndex];
             
-
             CreateLabel(newGame.Length, LabelWord);
             CreateLabelForAlph(newGame.Alphabet.Length, Literki);
            
@@ -58,16 +57,13 @@ namespace Hangman
                 label.Height = label.Width = 38;
                 label.HorizontalAlignment = HorizontalAlignment.Left;
                 label.VerticalAlignment = VerticalAlignment.Top;
-
                 label.Name = "Character" + i.ToString();
-
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
+                
                 LabelsForWord.Add(label);
-
                 grid.Children.Add(label);
             }
         }
-
         private void CreateLabelForAlph(int lenght, Grid grid)
         {
             for (int i = 0; i < lenght; i++)
@@ -97,9 +93,7 @@ namespace Hangman
         {
 
         }
-       
-        
-        //placeholdery bardzo fajne Panie Molenda
+
         private void resetTextboxValue(object sender, MouseButtonEventArgs e)
         {
 
@@ -140,51 +134,64 @@ namespace Hangman
 
         }
 
-        /***********************/
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             oneLetter = Letter.Text.ToUpper();
-
-
-          
-            int[] temp = newGame.CheckLetter(oneLetter[0]);
-            if (temp.Contains(1))
-            {
-
-                for (int i = 0; i < temp.Length; i++)
-                {
-                    if (temp[i] == 1)
-                    {
-                        LabelsForWord[i].Content = newGame.Word[i];
-                        for (int j = 0; j < LabelsForAlpha.Count; j++)
-                        {
-                            if (LabelsForAlpha[j].Content.ToString() == oneLetter)
-                                ChangeColorOfLetter(LabelsForAlpha[j], Brushes.Green);
-                        }
-                    }
-
-                }
-            }
+            if (oneLetter.Length > 1) 
+                MessageBox.Show("You need to enter one letter", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             else
             {
-              
-                    for(int i = 0; i < LabelsForAlpha.Count; i++)
+                int[] temp = newGame.CheckLetter(oneLetter[0]);
+                if (temp.Contains(1))
                 {
-                    if (LabelsForAlpha[i].Content.ToString() == oneLetter)
-                        ChangeColorOfLetter(LabelsForAlpha[i], Brushes.Red);
+                    for (int i = 0; i < temp.Length; i++)
+                    {
+                        if (temp[i] == 1)
+                        {
+                            LabelsForWord[i].Content = newGame.Word[i];
+                            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
+                        }
+                    }
                 }
-               
+                else
+                    ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
             }
         }
 
-
-        private void ChangeColorOfLetter(Label label, SolidColorBrush color)
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            label.Background = color;
+            oneLetter = Letter.Text.ToUpper();
+            try
+            {
+                if (oneLetter.Length > 1)
+                    MessageBox.Show("You need to enter one letter", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            finally
+            {
+                int[] temp = newGame.CheckLetter(oneLetter[0]);
+                if (temp.Contains(1))
+                {
+                    for (int i = 0; i < temp.Length; i++)
+                    {
+                        if (temp[i] == 1)
+                        {
+                            LabelsForWord[i].Content = newGame.Word[i];
+                            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
+                        }
+                    }
+                }
+                else
+                    ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
+            }
         }
-
-        
+        private void ChangeColorOfLetter(List<Label> labels, string searchedLetter, SolidColorBrush color)
+        {
+            for (int j = 0; j < labels.Count; j++)
+            {
+                if (labels[j].Content.ToString() == searchedLetter)
+                    labels[j].Background = color;
+            }
+        }   
     }
 }
 

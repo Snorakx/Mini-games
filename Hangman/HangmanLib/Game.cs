@@ -13,7 +13,6 @@ namespace HangmanLib
 {
     public class Game
     {
-        
         public string Word { get; set; }
         public int Length => Word.Length;
 
@@ -37,10 +36,7 @@ namespace HangmanLib
                     temp[i] = 0;
                 }
             }
-
             return temp;
         }
-
-
     }
 }
