@@ -38,5 +38,12 @@ namespace HangmanLib
             }
             return temp;
         }
+
+        public bool Guess(string guessedWord)
+        {
+            if (guessedWord == Word.ToUpper())
+                return true;
+            return false;
+        }
     }
 }

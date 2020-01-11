@@ -27,6 +27,7 @@ namespace Hangman
         private string placeholderGuess = "Guess the word";
         private string placeholderLetter = "Letter";
         string oneLetter;
+        string guessedWord;
         Game newGame = new Game();
 
         public HangmanWindow()
@@ -89,11 +90,6 @@ namespace Hangman
             }
         }
 
-        private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void resetTextboxValue(object sender, MouseButtonEventArgs e)
         {
 
@@ -134,54 +130,26 @@ namespace Hangman
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_ClickOneLetter(object sender, RoutedEventArgs e)
         {
             oneLetter = Letter.Text.ToUpper();
-            if (oneLetter.Length > 1) 
+            Letter.Text = "";
+            if (oneLetter.Length > 1)
                 MessageBox.Show("You need to enter one letter", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             else
             {
                 int[] temp = newGame.CheckLetter(oneLetter[0]);
-                if (temp.Contains(1))
-                {
-                    for (int i = 0; i < temp.Length; i++)
-                    {
-                        if (temp[i] == 1)
-                        {
-                            LabelsForWord[i].Content = newGame.Word[i];
-                            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
-                        }
-                    }
-                }
-                else
-                    ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
-            }
+                RevealLetters(temp);
+            }   
         }
-
-        private void Button_Click1(object sender, RoutedEventArgs e)
+        
+        private void Button_ClickWord(object sender, RoutedEventArgs e)
         {
-            oneLetter = Letter.Text.ToUpper();
-            try
+            guessedWord = GuessWord.Text.ToUpper();
+            GuessWord.Text = "";
+            if (newGame.Guess(guessedWord))
             {
-                if (oneLetter.Length > 1)
-                    MessageBox.Show("You need to enter one letter", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            finally
-            {
-                int[] temp = newGame.CheckLetter(oneLetter[0]);
-                if (temp.Contains(1))
-                {
-                    for (int i = 0; i < temp.Length; i++)
-                    {
-                        if (temp[i] == 1)
-                        {
-                            LabelsForWord[i].Content = newGame.Word[i];
-                            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
-                        }
-                    }
-                }
-                else
-                    ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
+                RevealWord();
             }
         }
         private void ChangeColorOfLetter(List<Label> labels, string searchedLetter, SolidColorBrush color)
@@ -191,7 +159,32 @@ namespace Hangman
                 if (labels[j].Content.ToString() == searchedLetter)
                     labels[j].Background = color;
             }
-        }   
+        }
+
+        private void RevealLetters(int[] tempArray)
+        {
+           if (tempArray.Contains(1))
+            {
+                for (int i = 0; i < tempArray.Length; i++)
+                {
+                    if (tempArray[i] == 1)
+                    {
+                    LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
+                    }
+                }
+            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
+            }
+         else
+            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
+        }
+
+        private void RevealWord()
+        {
+            for (int i = 0; i < LabelsForWord.Count; i++)
+            {
+                LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
+            }
+        }
     }
 }
 
