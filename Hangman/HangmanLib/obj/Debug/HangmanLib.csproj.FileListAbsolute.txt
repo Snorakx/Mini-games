@@ -623,3 +623,8 @@ C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignTh
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\patry\Documents\GitHub\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.dll
+C:\Users\patry\Documents\GitHub\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\patry\Documents\GitHub\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.pdb
+C:\Users\patry\Documents\GitHub\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\patry\Documents\GitHub\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.xml

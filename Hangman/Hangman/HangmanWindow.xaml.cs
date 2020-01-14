@@ -28,10 +28,12 @@ namespace Hangman
         private string placeholderLetter = "Letter";
         string oneLetter;
         string guessedWord;
+        private int Stage;
         Game newGame = new Game();
 
         public HangmanWindow()
         {
+            Stage = 1;
             InitializeComponent();
             LabelsForWord = new List<Label>();
             LabelsForAlpha = new List<Label>();
@@ -169,19 +171,23 @@ namespace Hangman
 
         private void RevealLetters(int[] tempArray)
         {
-           if (tempArray.Contains(1))
+            if (tempArray.Contains(1))
             {
                 for (int i = 0; i < tempArray.Length; i++)
                 {
                     if (tempArray[i] == 1)
                     {
-                    LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
+                        LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
                     }
                 }
-            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.YellowGreen);
+                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.YellowGreen);
             }
-         else
-            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
+            else
+            {
+                Stage++;
+                img.Source = GetStageImage();
+                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
+            }
         }
 
         private void RevealWord()
@@ -190,6 +196,11 @@ namespace Hangman
             {
                 LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
             }
+        }
+
+        private BitmapImage GetStageImage()
+        {
+            return new BitmapImage(new Uri(System.IO.Path.Combine(Environment.CurrentDirectory,$"Images/{Stage}.png")));
         }
 
         private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)

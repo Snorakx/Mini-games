@@ -28,7 +28,7 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <Image Margin="432,68,0,0" Source="8SRM8xDgq8duQSfM.jpg" Stretch="Fill" Height="286" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
+        <Image x:Name="img" Margin="432,68,0,0" Source="" Stretch="Fill" Height="286" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="43,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25" Grid.Column="1" FontWeight="Bold" FontFamily="Cooper Black"/>
         <Grid x:Name="LabelWord" Background="White" Margin="43,68,0,0" HorizontalAlignment="Left" Width="268" Height="38" VerticalAlignment="Top" Grid.Column="1"/>
         <Grid x:Name="Literki" Background="White" Margin="5,20,-5,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
