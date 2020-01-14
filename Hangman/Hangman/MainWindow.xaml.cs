@@ -32,5 +32,10 @@ namespace Hangman
             this.Visibility = Visibility.Hidden;
             objSecondWindow.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }   

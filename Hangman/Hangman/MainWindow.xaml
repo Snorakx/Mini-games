@@ -5,11 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="349,137,0,0" Click="OpenWindow"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="349,221,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Minigames" HorizontalAlignment="Left" Margin="285,64,0,0" VerticalAlignment="Top" Width="212"/>
+        <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="349,137,0,0" Click="OpenWindow" FontFamily="Cooper Black"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="345,221,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click" FontFamily="Cooper Black"/>
+        <Label Content="Hangman" HorizontalAlignment="Left" Margin="324,59,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" FontSize="25" FontWeight="Bold"/>
     </Grid>
 
 </Window>
