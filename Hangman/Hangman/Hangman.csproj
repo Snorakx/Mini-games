@@ -114,12 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="comment_PplAauTXq88xPrYP5AxssvaWYIJdlHTL,w400.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="download.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="8SRM8xDgq8duQSfM.jpg" />
   </ItemGroup>
   <ItemGroup>

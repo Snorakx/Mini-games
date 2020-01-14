@@ -19,7 +19,7 @@ namespace HangmanLib
         public char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
             'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
             'O','Ó', 'P', 'Q', 'R', 'S','Ś', 'T', 'U', 'V', 'W',
-            'X', 'Y', 'Z','Ź'};
+            'X', 'Y', 'Z','Ź', 'Ż'};
 
         public int[] CheckLetter(char letter)
         {

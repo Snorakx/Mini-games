@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="HangmanWindow" Height="445" Width="800">
+        Title="HangmanWindow" Height="437" Width="810">
 
-    <Grid>
+    <Grid Margin="0,0,11,-10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="59*"/>
@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Button Content="Check" Margin="51,318,0,0" Click="Button_ClickOneLetter" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Grid.Column="1" FontFamily="Cooper Black"/>
         <Button Content="Check" Margin="268,318,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Click="Button_ClickWord" Grid.Column="1" FontFamily="Cooper Black"/>
-        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="153,318,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Grid.Column="1"  >
+        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="153,318,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Grid.Column="1" TextChanged="GuessWord_TextChanged"  >
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
@@ -31,7 +31,7 @@
         <Image Margin="432,68,0,0" Source="8SRM8xDgq8duQSfM.jpg" Stretch="Fill" Height="286" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="43,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25" Grid.Column="1" FontWeight="Bold" FontFamily="Cooper Black"/>
         <Grid x:Name="LabelWord" Background="White" Margin="43,68,0,0" HorizontalAlignment="Left" Width="268" Height="38" VerticalAlignment="Top" Grid.Column="1"/>
-        <Grid x:Name="Literki" Background="White" Margin="1,20,-1,0" RenderTransformOrigin="0.503,1.151" Height="25" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Grid x:Name="Literki" Background="White" Margin="5,20,-5,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
 
     </Grid>
 

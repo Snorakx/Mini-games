@@ -50,6 +50,9 @@ namespace Hangman
             {
                 Label label = new Label();
                 label.FontSize = 20;
+                label.FontFamily = new FontFamily("Cooper Black");
+                label.Background = Brushes.DarkViolet;
+                label.Foreground = Brushes.White;
                 label.FontWeight = FontWeight;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
@@ -72,10 +75,13 @@ namespace Hangman
                 Label label = new Label();
                 label.FontSize = 10;
                 label.FontWeight = FontWeight;
+                label.FontFamily = new FontFamily("Cooper Black");
+                label.Background = Brushes.DarkViolet;
+                label.Foreground = Brushes.White;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
-                label.BorderThickness = new Thickness(1, 1, 1, 1);
-                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0x2D, 0x2D, 0x30));
+                label.BorderThickness = new Thickness(1, 2, 2, 2);
+                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0xff, 0xff, 0xff));
                 label.Height = label.Width = 23;
                 label.HorizontalAlignment = HorizontalAlignment.Left;
                 label.VerticalAlignment = VerticalAlignment.Top;
@@ -172,10 +178,10 @@ namespace Hangman
                     LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
                     }
                 }
-            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Green);
+            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.YellowGreen);
             }
          else
-            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Red);
+            ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
         }
 
         private void RevealWord()
@@ -184,6 +190,11 @@ namespace Hangman
             {
                 LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
             }
+        }
+
+        private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
