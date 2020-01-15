@@ -158,6 +158,9 @@ namespace Hangman
             if (newGame.Guess(guessedWord))
             {
                 RevealWord();
+                MessageBox.Show("You win!");
+                NewWindow();
+
             }
             else {
                 WrongGuess();

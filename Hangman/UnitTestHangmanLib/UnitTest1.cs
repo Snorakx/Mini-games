@@ -11,8 +11,13 @@ namespace UnitTestHangmanLib
         public void TestCheckLetter()
         {
             Game newGame = new Game();
-            newGame.Word = "kameleon";
-            newGame.CheckLetter('a');
+            newGame.Word = "karma";
+            int[] expectedTemp = { 0, 1, 0, 0, 1 };
+            int[] temp = newGame.CheckLetter('A');
+            for(int i = 0; i < temp.Length; i++)
+            {
+                Assert.AreEqual(temp[i], expectedTemp[i]);
+            }
         }
 
         [DataTestMethod]
@@ -28,11 +33,13 @@ namespace UnitTestHangmanLib
 
         [DataTestMethod]
         [DataRow(1, false)]
-        [DataRow(7, true)]
-        [DataRow(3, true)]
-        public void TestIsGameOver(string guessedWord, string realWord, bool expectedBool)
+        [DataRow(12, true)]
+        [DataRow(3, false)]
+        public void TestIsGameOver(int stage, bool expectedBool)
         {
-            
+            Game newGame = new Game();
+            newGame.Stage = stage;
+            Assert.AreEqual(newGame.IsGameOver(), expectedBool);
         }
     }
 }
