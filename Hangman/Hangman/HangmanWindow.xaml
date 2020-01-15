@@ -16,14 +16,14 @@
             <RowDefinition Height="354*"/>
             <RowDefinition Height="65*"/>
         </Grid.RowDefinitions>
-        <Button Content="Check" Margin="51,318,0,0" Click="Button_ClickOneLetter" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Grid.Column="1" FontFamily="Cooper Black"/>
-        <Button Content="Check" Margin="268,318,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Click="Button_ClickWord" Grid.Column="1" FontFamily="Cooper Black"/>
-        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="153,318,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Grid.Column="1" TextChanged="GuessWord_TextChanged"  >
+        <Button Content="Check" Margin="51,318,0,0" Click="Button_ClickOneLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Grid.Column="1" FontFamily="Cooper Black"/>
+        <Button Content="Check" Margin="268,318,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Click="Button_ClickWord" Grid.Column="1" FontFamily="Cooper Black"/>
+        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="153,318,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Grid.Column="1"  >
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <TextBox x:Name="Letter" Margin="1,318,0,0" TextWrapping="Wrap" Text="Letter" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Grid.Column="1">
+        <TextBox x:Name="Letter" Margin="1,318,0,0" TextWrapping="Wrap" Text="Letter" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Grid.Column="1">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
@@ -32,6 +32,7 @@
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="43,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25" Grid.Column="1" FontWeight="Bold" FontFamily="Cooper Black"/>
         <Grid x:Name="LabelWord" Background="White" Margin="43,68,0,0" HorizontalAlignment="Left" Width="268" Height="38" VerticalAlignment="Top" Grid.Column="1"/>
         <Grid x:Name="Literki" Background="White" Margin="5,20,-5,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Content="New Game" Margin="542,37,0,0" Height="23" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" Grid.Column="1" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction"/>
 
     </Grid>
 

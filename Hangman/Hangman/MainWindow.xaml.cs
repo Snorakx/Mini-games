@@ -23,13 +23,16 @@ namespace Hangman
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
 
         }
 
         private void OpenWindow(object sender, RoutedEventArgs e)
         {
             HangmanWindow objSecondWindow = new HangmanWindow();
-            this.Visibility = Visibility.Hidden;
+            objSecondWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Close();
             objSecondWindow.Show();
         }
 

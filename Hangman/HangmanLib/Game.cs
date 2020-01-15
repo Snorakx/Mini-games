@@ -15,6 +15,9 @@ namespace HangmanLib
     {
         public string Word { get; set; }
         public int Length => Word.Length;
+        public int Stage;
+        
+
 
         public char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
             'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
@@ -44,6 +47,13 @@ namespace HangmanLib
             if (guessedWord == Word.ToUpper())
                 return true;
             return false;
+        }
+
+        public bool IsGameOver()
+        {
+            if (Stage <= 12)
+                return true;
+            return true;
         }
     }
 }

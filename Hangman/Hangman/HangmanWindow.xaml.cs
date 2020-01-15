@@ -28,12 +28,11 @@ namespace Hangman
         private string placeholderLetter = "Letter";
         string oneLetter;
         string guessedWord;
-        private int Stage;
         Game newGame = new Game();
 
         public HangmanWindow()
         {
-            Stage = 1;
+            newGame.Stage = 1;
             InitializeComponent();
             LabelsForWord = new List<Label>();
             LabelsForAlpha = new List<Label>();
@@ -142,7 +141,7 @@ namespace Hangman
         {
             oneLetter = Letter.Text.ToUpper();
             Letter.Text = "";
-            if (oneLetter.Length > 1)
+            if (oneLetter.Length > 1 || oneLetter == "")
                 MessageBox.Show("You need to enter one letter", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             else
             {
@@ -159,6 +158,7 @@ namespace Hangman
             {
                 RevealWord();
             }
+            else NextStage();
         }
         private void ChangeColorOfLetter(List<Label> labels, string searchedLetter, SolidColorBrush color)
         {
@@ -184,14 +184,14 @@ namespace Hangman
             }
             else
             {
-                Stage++;
-                img.Source = GetStageImage();
+                NextStage();
                 ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
             }
         }
 
         private void RevealWord()
         {
+            
             for (int i = 0; i < LabelsForWord.Count; i++)
             {
                 LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
@@ -200,12 +200,26 @@ namespace Hangman
 
         private BitmapImage GetStageImage()
         {
-            return new BitmapImage(new Uri(System.IO.Path.Combine(Environment.CurrentDirectory,$"Images/{Stage}.png")));
+            return new BitmapImage(new Uri(System.IO.Path.Combine(Environment.CurrentDirectory,$"Images/{newGame.Stage}.png")));
         }
 
-        private void GuessWord_TextChanged(object sender, TextChangedEventArgs e)
+        private void mainMenuButtonClickFunction(object sender, RoutedEventArgs e)
         {
+            NewWindow();
+        }
 
+        private void NewWindow()
+        {
+            HangmanWindow objSecondWindow = new HangmanWindow();
+            objSecondWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Close();
+            objSecondWindow.Show();
+        }
+
+        private void NextStage()
+        {
+            newGame.Stage++;
+            img.Source = GetStageImage();
         }
     }
 }

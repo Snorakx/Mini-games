@@ -13,7 +13,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="Menu">
         <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="349,137,0,0" Click="OpenWindow" FontFamily="Cooper Black"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="345,221,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click" FontFamily="Cooper Black"/>
         <Label Content="Hangman" HorizontalAlignment="Left" Margin="324,59,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" FontSize="25" FontWeight="Bold"/>
