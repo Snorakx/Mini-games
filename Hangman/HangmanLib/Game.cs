@@ -16,6 +16,7 @@ namespace HangmanLib
         public string Word { get; set; }
         public int Length => Word.Length;
         public int Stage;
+        public int Points;
         
         public char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
             'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
@@ -49,7 +50,7 @@ namespace HangmanLib
 
         public bool IsGameOver()
         {
-            if (Stage <= 7)
+            if (Stage <= 10)
                 return false;
             return true;
         }

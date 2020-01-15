@@ -28,11 +28,14 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <Image x:Name="img" Margin="432,68,0,0" Source="" Stretch="Fill" Height="286" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
+        <Image x:Name="img" Margin="432,68,0,0" Source="" Stretch="Fill" Height="245" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="43,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25" Grid.Column="1" FontWeight="Bold" FontFamily="Cooper Black"/>
         <Grid x:Name="LabelWord" Background="White" Margin="43,68,0,0" HorizontalAlignment="Left" Width="268" Height="38" VerticalAlignment="Top" Grid.Column="1"/>
         <Grid x:Name="Literki" Background="White" Margin="5,20,-5,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Button Content="New Game" Margin="542,37,0,0" Height="23" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" Grid.Column="1" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction"/>
+        <Button Content="New Game" Margin="494,318,0,0" Height="27" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" Grid.Column="1" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction" RenderTransformOrigin="1.424,0.844"/>
+        <Label x:Name="score" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="535,36,0,0" VerticalAlignment="Top" Width="27"/>
+        <Label x:Name="scoreText"  Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="464,41,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" Width="71" FontSize="20"/>
+
 
     </Grid>
 

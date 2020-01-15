@@ -33,6 +33,7 @@ namespace Hangman
         public HangmanWindow()
         {
             newGame.Stage = 1;
+            newGame.Points = 0;
             InitializeComponent();
             LabelsForWord = new List<Label>();
             LabelsForAlpha = new List<Label>();
@@ -52,13 +53,13 @@ namespace Hangman
                 Label label = new Label();
                 label.FontSize = 20;
                 label.FontFamily = new FontFamily("Cooper Black");
-                label.Background = Brushes.DarkViolet;
+                label.Background = Brushes.Black;
                 label.Foreground = Brushes.White;
                 label.FontWeight = FontWeight;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
                 label.BorderThickness = new Thickness(1, 1, 1, 1);
-                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0x2D, 0x2D, 0x30));
+                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0xff, 0xff, 0xff));
                 label.Height = label.Width = 38;
                 label.HorizontalAlignment = HorizontalAlignment.Left;
                 label.VerticalAlignment = VerticalAlignment.Top;
@@ -77,7 +78,7 @@ namespace Hangman
                 label.FontSize = 10;
                 label.FontWeight = FontWeight;
                 label.FontFamily = new FontFamily("Cooper Black");
-                label.Background = Brushes.DarkViolet;
+                label.Background = Brushes.Black;
                 label.Foreground = Brushes.White;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
@@ -183,6 +184,7 @@ namespace Hangman
                         LabelsForWord[i].Content = newGame.Word.ToUpper()[i];
                     }
                 }
+                AddPoint();
                 ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.YellowGreen);
                 if (LabelsForWord.Count(l => l.Content == null) == 0)
                 {
@@ -227,6 +229,16 @@ namespace Hangman
             img.Source = GetStageImage();
         }
 
+        private void AddPoint()
+        {
+            newGame.Points++;
+            score.Content = newGame.Points;
+            score.FontFamily = new FontFamily("Cooper Black");
+            score.FontSize = 25;
+            score.HorizontalAlignment = HorizontalAlignment.Left;
+            score.VerticalAlignment = VerticalAlignment.Top;
+
+        }
         private void WrongGuess()
         {
             if (newGame.IsGameOver())
