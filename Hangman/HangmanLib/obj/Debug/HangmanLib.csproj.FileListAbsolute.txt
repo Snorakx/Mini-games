@@ -633,3 +633,8 @@ C:\Users\fipis\source\repos\Frewencja\Mini-games\Hangman\HangmanLib\bin\Debug\Ma
 C:\Users\fipis\source\repos\Frewencja\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.pdb
 C:\Users\fipis\source\repos\Frewencja\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\fipis\source\repos\Frewencja\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\fipil\Documents\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.dll
+C:\Users\fipil\Documents\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\fipil\Documents\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignColors.pdb
+C:\Users\fipil\Documents\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\fipil\Documents\Mini-games\Hangman\HangmanLib\bin\Debug\MaterialDesignThemes.Wpf.xml

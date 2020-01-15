@@ -158,7 +158,9 @@ namespace Hangman
             {
                 RevealWord();
             }
-            else NextStage();
+            else {
+                WrongGuess();
+            }
         }
         private void ChangeColorOfLetter(List<Label> labels, string searchedLetter, SolidColorBrush color)
         {
@@ -173,6 +175,7 @@ namespace Hangman
         {
             if (tempArray.Contains(1))
             {
+
                 for (int i = 0; i < tempArray.Length; i++)
                 {
                     if (tempArray[i] == 1)
@@ -181,12 +184,14 @@ namespace Hangman
                     }
                 }
                 ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.YellowGreen);
+                if (LabelsForWord.Count(l => l.Content == null) == 0)
+                {
+                    MessageBox.Show("You win!");
+                    NewWindow();
+                }
             }
             else
-            {
-                NextStage();
-                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
-            }
+                WrongGuess();            
         }
 
         private void RevealWord()
@@ -220,6 +225,21 @@ namespace Hangman
         {
             newGame.Stage++;
             img.Source = GetStageImage();
+        }
+
+        private void WrongGuess()
+        {
+            if (newGame.IsGameOver())
+            {
+                NextStage();
+                MessageBox.Show("You lose!");
+                NewWindow();
+            }
+            else
+            {
+                NextStage();
+                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
+            }
         }
     }
 }

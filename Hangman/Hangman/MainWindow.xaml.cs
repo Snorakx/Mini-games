@@ -24,8 +24,6 @@ namespace Hangman
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
-
         }
 
         private void OpenWindow(object sender, RoutedEventArgs e)
@@ -38,7 +36,7 @@ namespace Hangman
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }   
