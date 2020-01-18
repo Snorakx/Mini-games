@@ -15,21 +15,24 @@
 The goal of the project is to implement a simple desktop application in C #, working in the user's graphical environment, using the WPF framework (UWP, fluent UI, ...). Hangman was part of a semester long project for our second year at the WSEI. We have chosen to develop this game because it appeared to us as a complete exercice in adequation to our level.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Menu](./Screnshoot/menu.png)
+![Game](./Screnshoot/game.png)
 
 ## Technologies
 * Json.Net - v1.0.18
 * MaterialDesignColors - v1.2.2
 * MaterialDesignThemes - v3.0.1
+* MSTest.TestAdapter - v1.3.2
+* MSTest.TestFramework - v1.3.2
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+1.Download/clone _Mini-games_ repo.
+2.Find folders: Installer -> Installer-SetupFiles.
+3.Install game.
+4.You can find a game folder in program files.
 
 ## Features
-List of TODOs for future development:
-* changing hangman pictures
-* development of unit tests
-* adding installer
+* Write documentation
 
 ## Status
 Project is: _in progress_
