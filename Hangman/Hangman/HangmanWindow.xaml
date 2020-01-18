@@ -20,12 +20,12 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="788,1,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click" FontFamily="Cooper Black" Height="27" FontSize="14"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="729,349,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click" FontFamily="Cooper Black" Height="27" FontSize="14"/>
         <Image x:Name="img" Margin="488,72,0,0" Source="" Stretch="Fill" Height="254" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="0" OpacityMask="{x:Null}"/>
         <Label Content="Guess the word" HorizontalAlignment="Left" Margin="49,21,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Cooper Black" Height="37" Foreground="#455A64"/>
         <Grid x:Name="LabelWord" Background="#FFCFD8DC" Margin="53,82,0,0" HorizontalAlignment="Left" Width="292" Height="38" VerticalAlignment="Top"/>
         <Grid x:Name="lowercaseLetters" Background="#FFCFD8DC" Margin="0,400,0,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top"/>
-        <Button Content="New Game" Margin="589,349,0,0" Height="27" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction" RenderTransformOrigin="1.424,0.844"/>
+        <Button Content="New Game" Margin="538,349,0,0" Height="27" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction" RenderTransformOrigin="1.424,0.844"/>
         <Label x:Name="score" Content="" HorizontalAlignment="Left" Margin="541,34,0,0" VerticalAlignment="Top" Width="27" Height="38" RenderTransformOrigin="0.444,1.156" FontFamily="Cooper Black" FontSize="25"/>
         <Label x:Name="scoreText"  Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="464,41,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" Width="71" FontSize="20" Height="31" Foreground="#455A64"/>
 

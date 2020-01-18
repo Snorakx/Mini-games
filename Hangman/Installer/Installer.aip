@@ -52,6 +52,7 @@
     <ROW Directory="Hangman_Dir" Directory_Parent="APPDIR" DefaultDir="Hangman"/>
     <ROW Directory="Images_Dir" Directory_Parent="Hangman_Dir" DefaultDir="Images"/>
     <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
@@ -59,6 +60,7 @@
     <ROW Component="Hangman_PrimaryOutput" ComponentId="{D2998C8E-6DA5-4676-855B-3E7D71E7623A}" Directory_="Hangman_Dir" Attributes="0" KeyPath="Hangman.exe"/>
     <ROW Component="Hangman_References" ComponentId="{C8BF0D25-3570-4301-8D94-4BB085FADE15}" Directory_="Hangman_Dir" Attributes="0" KeyPath="MaterialDesignThemes.Wpf.dll"/>
     <ROW Component="ProductInformation" ComponentId="{2EA66C0E-25DE-46B5-B0AE-3FDAA6CF6289}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{4CA5F080-8CB0-472B-AF70-00A1C73E711A}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="jpg" ComponentId="{951D0AFC-A5DD-48ED-98FA-AC8D41742DE9}" Directory_="Images_Dir" Attributes="0" KeyPath="jpg" Type="0"/>
     <ROW Component="words.txt" ComponentId="{F20689B2-9C42-424C-A1DF-AA1F19E588BF}" Directory_="Hangman_Dir" Attributes="0" KeyPath="words.txt" Type="0"/>
   </COMPONENT>
@@ -148,6 +150,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -170,6 +173,7 @@
     <ROW Feature_="MainFeature" Component_="Hangman_PrimaryOutput"/>
     <ROW Feature_="MainFeature" Component_="words.txt"/>
     <ROW Feature_="MainFeature" Component_="jpg"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="Ico.exe" SourcePath="..\..\..\Ico.ico" Index="0"/>
@@ -198,6 +202,9 @@
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Hangman" Directory_="SHORTCUTDIR" Name="Hangman" Component_="Hangman_PrimaryOutput" Target="[#Hangman.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
   </COMPONENT>
@@ -210,7 +217,7 @@
     <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="References" OutputFile="Json.Net.dll"/>
     <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="References" OutputFile="MaterialDesignColors.dll"/>
     <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="References" OutputFile="MaterialDesignThemes.Wpf.dll"/>
-    <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="PrimaryOutput" OutputFile="Hangman.exe"/>
+    <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="PrimaryOutput" OutputFile="Hangman.exe" OutputFileShortcut="Hangman"/>
     <ROW ProjectId="{2b67b730-70d2-4d44-b25b-894318d354a6}" ProjectName="Hangman" OutputGroup="PrimaryOutput" OutputFile="Hangman.exe.config"/>
   </COMPONENT>
 </DOCUMENT>
