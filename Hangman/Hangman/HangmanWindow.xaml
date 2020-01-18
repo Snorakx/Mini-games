@@ -5,37 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="Hangman" Height="437" Width="830" MaxHeight="437" MaxWidth="830">
+        Title="Hangman" Height="450" Width="875" Foreground="#FFE81616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
 
-    <Grid Margin="0,0,11,-10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="59*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="354*"/>
-            <RowDefinition Height="65*"/>
-        </Grid.RowDefinitions>
-        <Button Content="Check" Margin="51,318,0,0" Click="Button_ClickOneLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Grid.Column="1" FontFamily="Cooper Black"/>
-        <Button Content="Check" Margin="268,318,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Click="Button_ClickWord" Grid.Column="1" FontFamily="Cooper Black"/>
-        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="153,318,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Grid.Column="1"  >
+    <Grid Margin="0" Background="#FFCFD8DC" Height="Auto" Width="Auto">
+        <Button Content="Check" Margin="113,349,0,0" Click="Button_ClickOneLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" FontFamily="Cooper Black"/>
+        <Button Content="Check" Margin="330,349,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86" Click="Button_ClickWord" FontFamily="Cooper Black"/>
+        <TextBox x:Name="GuessWord" PreviewMouseDown="resetTextboxValue" Margin="215,349,0,0" TextWrapping="Wrap" Text="Guess the word" HorizontalContentAlignment="Center" LostFocus="resetPlaceholder" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"  >
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <TextBox x:Name="Letter" Margin="1,318,0,0" TextWrapping="Wrap" Text="Letter" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Grid.Column="1">
+        <TextBox x:Name="Letter" Margin="63,349,0,0" TextWrapping="Wrap" Text="Letter" HorizontalContentAlignment="Center" PreviewMouseDown="resetTxtboxValue2" LostFocus="resetPlaceholderLetter" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
             </TextBox.Foreground>
         </TextBox>
-        <Image x:Name="img" Margin="432,68,0,0" Source="" Stretch="Fill" Height="245" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="1"/>
-        <Label Content="Guess the word" HorizontalAlignment="Left" Margin="43,27,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="25" Grid.Column="1" FontWeight="Bold" FontFamily="Cooper Black"/>
-        <Grid x:Name="LabelWord" Background="White" Margin="43,68,0,0" HorizontalAlignment="Left" Width="268" Height="38" VerticalAlignment="Top" Grid.Column="1"/>
-        <Grid x:Name="Literki" Background="White" Margin="5,20,-5,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Button Content="New Game" Margin="494,318,0,0" Height="27" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" Grid.Column="1" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction" RenderTransformOrigin="1.424,0.844"/>
-        <Label x:Name="score" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="535,36,0,0" VerticalAlignment="Top" Width="27"/>
-        <Label x:Name="scoreText"  Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="464,41,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" Width="71" FontSize="20"/>
-
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="788,1,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click" FontFamily="Cooper Black" Height="27" FontSize="14"/>
+        <Image x:Name="img" Margin="488,72,0,0" Source="" Stretch="Fill" Height="254" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Grid.Column="0" OpacityMask="{x:Null}"/>
+        <Label Content="Guess the word" HorizontalAlignment="Left" Margin="49,21,0,0" VerticalAlignment="Top" Width="253" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Cooper Black" Height="37" Foreground="#455A64"/>
+        <Grid x:Name="LabelWord" Background="#FFCFD8DC" Margin="53,82,0,0" HorizontalAlignment="Left" Width="292" Height="38" VerticalAlignment="Top"/>
+        <Grid x:Name="lowercaseLetters" Background="#FFCFD8DC" Margin="0,400,0,0" RenderTransformOrigin="0.503,1.151" Height="24" VerticalAlignment="Top"/>
+        <Button Content="New Game" Margin="589,349,0,0" Height="27" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="124" FontFamily="Cooper Black" Click="mainMenuButtonClickFunction" RenderTransformOrigin="1.424,0.844"/>
+        <Label x:Name="score" Content="" HorizontalAlignment="Left" Margin="541,34,0,0" VerticalAlignment="Top" Width="27" Height="38" RenderTransformOrigin="0.444,1.156" FontFamily="Cooper Black" FontSize="25"/>
+        <Label x:Name="scoreText"  Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="464,41,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" Width="71" FontSize="20" Height="31" Foreground="#455A64"/>
 
     </Grid>
 

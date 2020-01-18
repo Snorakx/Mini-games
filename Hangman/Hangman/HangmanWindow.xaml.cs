@@ -43,7 +43,7 @@ namespace Hangman
             newGame.Word = wordsFile[randomWordIndex];
             
             CreateLabel(newGame.Length, LabelWord);
-            CreateLabelForAlph(newGame.Alphabet.Length, Literki);
+            CreateLabelForAlph(newGame.Alphabet.Length, lowercaseLetters);
            
         }
         private void CreateLabel(int lenght, Grid grid)
@@ -53,19 +53,18 @@ namespace Hangman
                 Label label = new Label();
                 label.FontSize = 20;
                 label.FontFamily = new FontFamily("Cooper Black");
-                label.Background = Brushes.Black;
-                label.Foreground = Brushes.White;
+                label.Foreground = Brushes.DarkSlateGray;
                 label.FontWeight = FontWeight;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
-                label.BorderThickness = new Thickness(1, 1, 1, 1);
-                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0xff, 0xff, 0xff));
+                label.BorderThickness = new Thickness(2, 2, 2, 2);
+                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 96, 125, 139));
                 label.Height = label.Width = 38;
                 label.HorizontalAlignment = HorizontalAlignment.Left;
                 label.VerticalAlignment = VerticalAlignment.Top;
                 label.Name = "Character" + i.ToString();
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
-                
+
                 LabelsForWord.Add(label);
                 grid.Children.Add(label);
             }
@@ -78,21 +77,16 @@ namespace Hangman
                 label.FontSize = 10;
                 label.FontWeight = FontWeight;
                 label.FontFamily = new FontFamily("Cooper Black");
-                label.Background = Brushes.Black;
-                label.Foreground = Brushes.White;
+                label.Foreground = Brushes.DarkSlateGray;
                 label.HorizontalContentAlignment = HorizontalAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
-                label.BorderThickness = new Thickness(1, 2, 2, 2);
-                label.BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0xff, 0xff, 0xff));
-                label.Height = label.Width = 23;
+                label.Height = label.Width = 25;
                 label.HorizontalAlignment = HorizontalAlignment.Left;
                 label.VerticalAlignment = VerticalAlignment.Top;
-
                 label.Name = "Character" + i.ToString();
-
                 label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
                 label.Content = newGame.Alphabet[i];
-
+                
                 LabelsForAlpha.Add(label);
                 grid.Children.Add(label);
             }
@@ -210,7 +204,7 @@ namespace Hangman
 
         private BitmapImage GetStageImage()
         {
-            return new BitmapImage(new Uri(System.IO.Path.Combine(Environment.CurrentDirectory,$"Images/{newGame.Stage}.png")));
+            return new BitmapImage(new Uri(System.IO.Path.Combine(Environment.CurrentDirectory,$"Images/{newGame.Stage}.jpg")));
         }
 
         private void mainMenuButtonClickFunction(object sender, RoutedEventArgs e)
@@ -237,6 +231,7 @@ namespace Hangman
             newGame.Points++;
             score.Content = newGame.Points;
             score.FontFamily = new FontFamily("Cooper Black");
+            score.Foreground = Brushes.DarkSlateGray;
             score.FontSize = 25;
             score.HorizontalAlignment = HorizontalAlignment.Left;
             score.VerticalAlignment = VerticalAlignment.Top;
@@ -253,8 +248,21 @@ namespace Hangman
             else
             {
                 NextStage();
-                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.Tomato);
+                ChangeColorOfLetter(LabelsForAlpha, oneLetter, Brushes.LightSalmon);
             }
+        }
+
+        private void OpenWindow(object sender, RoutedEventArgs e)
+        {
+            HangmanWindow objSecondWindow = new HangmanWindow();
+            objSecondWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Close();
+            objSecondWindow.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

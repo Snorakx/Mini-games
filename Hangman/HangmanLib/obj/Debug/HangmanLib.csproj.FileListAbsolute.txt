@@ -614,7 +614,6 @@ C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\System.Xml.XPath
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\System.Xml.XPath.XDocument.dll
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\bin\Debug\Json.Net.dll
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\obj\Debug\HangmanLib.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\obj\Debug\HangmanLib.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\obj\Debug\HangmanLib.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\obj\Debug\HangmanLib.dll
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\HangmanLib\obj\Debug\HangmanLib.pdb

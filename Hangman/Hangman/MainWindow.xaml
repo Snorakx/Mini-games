@@ -12,15 +12,15 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Hangman"  Height="437" Width="828" MaxHeight="437" MaxWidth="830">
-    <Grid x:Name="Menu" RenderTransformOrigin="0.504,0.452">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="651*"/>
-            <ColumnDefinition Width="173*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" Margin="346,169,0,0" Click="OpenWindow" FontFamily="Cooper Black" Height="37" FontSize="20"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="346,272,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click" FontFamily="Cooper Black" Height="38" FontSize="20"/>
-        <Label Content="Hangman" HorizontalAlignment="Left" Margin="333,78,0,0" VerticalAlignment="Top" FontFamily="Cooper Black" FontSize="30" FontWeight="Bold" Width="154"/>
+        Title="Hangman" Height="437" Width="810" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Grid x:Name="Menu">
+        <Grid.Background>
+            <SolidColorBrush Color="#FFCFD8DC"/>
+        </Grid.Background>
+        <Button Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="345,187,0,0" Click="OpenWindow" FontFamily="Cooper Black" Height="44" FontSize="20"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="345,264,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click" FontFamily="Cooper Black" Height="44" FontSize="20"/>
+        <Label Content="Hangman" HorizontalAlignment="Left" Margin="279,81,0,0" VerticalAlignment="Top" FontSize="50" FontWeight="Bold" Height="71" Width="250" FontFamily="Cooper Black" Foreground="#455A64" RenderTransformOrigin="1.156,0.676"/>
     </Grid>
 
 </Window>

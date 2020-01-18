@@ -698,7 +698,6 @@ C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\HangmanWindow.baml
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.g.resources
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.cache
-C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.exe
 C:\Users\Lenovo\Desktop\Mini-games\Hangman\Hangman\obj\Debug\Hangman.pdb
