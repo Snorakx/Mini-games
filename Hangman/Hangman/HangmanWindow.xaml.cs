@@ -28,20 +28,19 @@ namespace Hangman
         private string placeholderLetter = "Letter";
         string oneLetter;
         string guessedWord;
-        Game newGame = new Game();
+        Game newGame;
+
 
         public HangmanWindow()
         {
-            newGame.Stage = 1;
-            newGame.Points = 0;
-            InitializeComponent();
+            InitializeComponent();    
             LabelsForWord = new List<Label>();
             LabelsForAlpha = new List<Label>();
-
             var wordsFile = File.ReadAllText("words.txt").Split(',');
             var randomWordIndex = new Random().Next(0, wordsFile.Length - 1);
-            newGame.Word = wordsFile[randomWordIndex];
+            newGame = new Game(wordsFile[randomWordIndex]);
             
+
             CreateLabel(newGame.Length, LabelWord);
             CreateLabelForAlph(newGame.Alphabet.Length, lowercaseLetters);
            
@@ -144,21 +143,22 @@ namespace Hangman
                 RevealLetters(temp);
             }   
         }
-        
+
         private void Button_ClickWord(object sender, RoutedEventArgs e)
         {
             guessedWord = GuessWord.Text.ToUpper();
             GuessWord.Text = "";
-            if (newGame.Guess(guessedWord))
+            if (guessedWord.Length <= 2 || guessedWord == null)
+                MessageBox.Show("You need to enter  at least two letters", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            else if (newGame.Guess(guessedWord))
             {
                 RevealWord();
                 MessageBox.Show("You win!");
                 NewWindow();
-
             }
-            else {
+            else
                 WrongGuess();
-            }
+            
         }
         private void ChangeColorOfLetter(List<Label> labels, string searchedLetter, SolidColorBrush color)
         {

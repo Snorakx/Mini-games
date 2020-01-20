@@ -13,15 +13,25 @@ namespace HangmanLib
 {
     public class Game
     {
-        public string Word { get; set; }
-        public int Length => Word.Length;
-        public int Stage;
-        public int Points;
-        
+        public string Word { get;}
+        public int Length { get;}
+        public int Stage { get; set; }
+        public int Points { get; set; }
+
         public char[] Alphabet = new char[] {'A','Ą', 'B', 'C','Ć', 'D', 'E','Ę',
             'F', 'G', 'H', 'I', 'J', 'K', 'L','Ł', 'M', 'N','Ń',
             'O','Ó', 'P', 'Q', 'R', 'S','Ś', 'T', 'U', 'V', 'W',
             'X', 'Y', 'Z','Ź', 'Ż'};
+
+        public Game(string word)
+        {
+            if (word.Length <= 1)
+                throw new ArgumentException();
+            Word = word;
+            Length = Word.Length; 
+            Stage = 1;
+            Points = 0;
+        }
 
         public int[] CheckLetter(char letter)
         {
