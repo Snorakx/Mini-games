@@ -32,7 +32,11 @@ namespace HangmanLib
             Stage = 1;
             Points = 0;
         }
-
+        /// <summary>
+        /// Funkcja CheckLetter sprawdza czy w wylosowanym słowie znajduje się litera, którą wpisał gracza
+        /// /// </summary>
+        /// <param name="letter">Litera</param>
+        /// <returns></returns>
         public int[] CheckLetter(char letter)
         {
             int[] temp = new int[Length];
@@ -50,14 +54,21 @@ namespace HangmanLib
             }
             return temp;
         }
-
+        /// <summary>
+        /// Funkcja Guess sprawdza czy wylosowane słowo jest takie same jak słowo wpisane przez gracza 
+        /// </summary>
+        /// <param name="guessedWord">Słowo wpisane przez gracza</param>
+        /// <returns></returns>
         public bool Guess(string guessedWord)
         {
             if (guessedWord == Word.ToUpper())
                 return true;
             return false;
         }
-
+        /// <summary>
+        /// Funkcja sprawdza czy gracz przekroczył liczbę 10 prób
+        /// </summary>
+        /// <returns>Jeśli gracz przekroczył liczbę prób zwracana jest wartość true, jeśli nie false</returns>
         public bool IsGameOver()
         {
             if (Stage <= 10)

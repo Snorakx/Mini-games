@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>2d3ceb14-a10b-4fa4-bf06-5c858315645c</ProjectGuid>
+    <ProjectGuid>525205de-a6a6-4f72-b545-178f158bebe2</ProjectGuid>
     <OutputType>msi</OutputType>
     <ProjectHome>.</ProjectHome>
     <StartupFile>Installer.aip</StartupFile>
@@ -27,7 +27,7 @@
       <Name>Hangman</Name>
       <Project>{2b67b730-70d2-4d44-b25b-894318d354a6}</Project>
       <Private>True</Private>
-      <OutputsToImport>References;PrimaryOutput</OutputsToImport>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
     </ProjectReference>
   </ItemGroup>
   <Target Name="Build">

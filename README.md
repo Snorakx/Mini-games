@@ -13,7 +13,7 @@
 ## General info
 The goal of the project is to implement a simple desktop application in C #, working in the user's graphical environment, using the WPF framework (UWP, fluent UI, ...). Hangman was part of a semester long project for our second year at the WSEI. We have chosen to develop this game because it appeared to us as a complete exercice in adequation to our level.
 
-## Screenshot
+## Screenshots
 ![Game](./Screnshoot/game.png)
 
 ## Technologies

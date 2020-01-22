@@ -45,6 +45,11 @@ namespace Hangman
             CreateLabelForAlph(newGame.Alphabet.Length, lowercaseLetters);
            
         }
+        /// <summary>
+        /// Funkcja tworzy odpowiednią liczbę pól (label) w stosunku do ilości liter w wylosowanym słowie
+        /// </summary>
+        /// <param name="lenght"> długość wyolosowanego słowa(elementu tablicy)</param>
+        /// <param name="grid"></param>
         private void CreateLabel(int lenght, Grid grid)
         {
             for (int i = 0; i < lenght; i++)
@@ -68,6 +73,11 @@ namespace Hangman
                 grid.Children.Add(label);
             }
         }
+        /// <summary>
+        /// Funkcja tworzy odpowiednią liczbę pól (label) w stosunku alfabetu
+        /// </summary>
+        /// <param name="lenght"> długość alfabetu</param>
+        /// <param name="grid"></param>
         private void CreateLabelForAlph(int lenght, Grid grid)
         {
             for (int i = 0; i < lenght; i++)
