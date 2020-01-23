@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HangmanLib</name>
+    </assembly>
+    <members>
+        <member name="M:HangmanLib.Game.CheckLetter(System.Char)">
+            <summary>
+            Funkcja CheckLetter sprawdza czy w wylosowanym słowie znajduje się litera, którą wpisał gracza
+            /// </summary>
+            <param name="letter">Litera</param>
+            <returns></returns>
+        </member>
+        <member name="M:HangmanLib.Game.Guess(System.String)">
+            <summary>
+            Funkcja Guess sprawdza czy wylosowane słowo jest takie same jak słowo wpisane przez gracza 
+            </summary>
+            <param name="guessedWord">Słowo wpisane przez gracza</param>
+            <returns></returns>
+        </member>
+        <member name="M:HangmanLib.Game.IsGameOver">
+            <summary>
+            Funkcja sprawdza czy gracz przekroczył liczbę 10 prób
+            </summary>
+            <returns>Jeśli gracz przekroczył liczbę prób zwracana jest wartość true, jeśli nie false</returns>
+        </member>
+    </members>
+</doc>

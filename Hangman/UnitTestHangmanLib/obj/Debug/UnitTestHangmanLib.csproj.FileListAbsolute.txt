@@ -64,3 +64,19 @@ C:\Users\Lenovo\Desktop\okurwa\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\U
 C:\Users\Lenovo\Desktop\okurwa\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\okurwa\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.dll
 C:\Users\Lenovo\Desktop\okurwa\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.pdb
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\UnitTestHangmanLib.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\UnitTestHangmanLib.pdb
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\HangmanLib.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\HangmanLib.pdb
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\HangmanLib.xml
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.dll
+C:\Users\Lenovo\Desktop\Nowy folder (4)\Mini-games\Hangman\UnitTestHangmanLib\obj\Debug\UnitTestHangmanLib.pdb

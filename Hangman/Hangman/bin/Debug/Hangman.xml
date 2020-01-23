@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hangman</name>
+    </assembly>
+    <members>
+        <member name="T:Hangman.HangmanWindow">
+            <summary>
+            Interaction logic for Window1.xaml
+            </summary>
+            <summary>
+            HangmanWindow
+            </summary>
+        </member>
+        <member name="M:Hangman.HangmanWindow.CreateLabel(System.Int32,System.Windows.Controls.Grid)">
+            <summary>
+            Funkcja tworzy odpowiednią liczbę pól (label) w stosunku do ilości liter w wylosowanym słowie
+            </summary>
+            <param name="lenght"> długość wyolosowanego słowa(elementu tablicy)</param>
+            <param name="grid"></param>
+        </member>
+        <member name="M:Hangman.HangmanWindow.CreateLabelForAlph(System.Int32,System.Windows.Controls.Grid)">
+            <summary>
+            Funkcja tworzy odpowiednią liczbę pól (label) w stosunku alfabetu
+            </summary>
+            <param name="lenght"> długość alfabetu</param>
+            <param name="grid"></param>
+        </member>
+        <member name="M:Hangman.HangmanWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Hangman.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Hangman.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Hangman.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Hangman.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Hangman.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Hangman.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Hangman.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Hangman.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
