@@ -3,18 +3,17 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
+* [Screenshot](#screenshot)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
 
 ## General info
 The goal of the project is to implement a simple desktop application in C #, working in the user's graphical environment, using the WPF framework (UWP, fluent UI, ...). Hangman was part of a semester long project for our second year at the WSEI. We have chosen to develop this game because it appeared to us as a complete exercice in adequation to our level.
 
-## Screenshots
-![Game](./Screnshoot/game.png)
+## Screenshot
+![Game](./screen/game.png)
 
 ## Technologies
 * Microsoft WPF Framework
@@ -32,11 +31,9 @@ The goal of the project is to implement a simple desktop application in C #, wor
 3. Install game.
 4. You can find a game shortcut on your desktop.
 
-## Features
-* Write documentation
 
 ## Status
-Project is: _in progress_
+Project is: _done_
 
 ## Contact
 Created by:
